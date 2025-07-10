@@ -9,30 +9,30 @@ pool:
   vmImage: 'ubuntu-latest'
 #  name: default
 steps:
-- task: Maven@3
-  displayName: Build with Maven
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+# - task: Maven@3
+#   displayName: Build with Maven
+#   inputs:
+#     mavenPomFile: 'pom.xml'
+#     mavenOptions: '-Xmx3072m'
+#     javaHomeOption: 'JDKVersion'
+#     jdkVersionOption: '1.8'
+#     jdkArchitectureOption: 'x64'
+#     publishJUnitResults: true
+#     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+#     goals: 'package'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'ls -lrt target/'
+# - task: Bash@3
+#   inputs:
+#     targetType: 'inline'
+#     script: 'ls -lrt target/'
 - task: Veracode@3
   inputs:
     ConnectionDetailsSelection: 'Service Connection'
     AnalysisService: 'Veracode API'
     veracodeAppProfile: 'ADO-Test-ENG'
     version: '$(build.buildNumber)'
-    filepath: 'target/gs-spring-boot-0.1.0.jar'
-    sandboxName: 'Test-ENG-New'
+    filepath: './00873984_Archive.zip'
+    sandboxName: 'Test-ENG-New-2'
     createSandBox: true
     createProfile: true
     failBuildIfUploadAndScanBuildStepFails: true
