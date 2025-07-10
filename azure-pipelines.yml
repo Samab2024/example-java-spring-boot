@@ -31,7 +31,7 @@ steps:
     AnalysisService: 'Veracode API'
     veracodeAppProfile: 'ADO-Test-ENG'
     version: '$(build.buildNumber)'
-    filepath: 'target/*.jar'
+    filepath: 'target/gs-spring-boot-0.1.0.jar'
     sandboxName: 'Test-ENG-New'
     createSandBox: true
     createProfile: true
