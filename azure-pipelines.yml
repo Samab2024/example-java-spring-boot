@@ -31,7 +31,7 @@ steps:
     AnalysisService: 'Veracode API'
     veracodeAppProfile: 'ADO-Test-ENG'
     version: '$(build.buildNumber)'
-    filepath: './00873984_Archive.zip'
+    filepath: './veracode-auto-pack-verademo-js-no-pm.zip'
     sandboxName: 'Test-ENG-New-2'
     createSandBox: true
     createProfile: true
