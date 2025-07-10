@@ -27,7 +27,7 @@ steps:
     AnalysisService: 'Veracode API'
     veracodeAppProfile: 'ADO-Test-ENG'
     version: '$(build.buildNumber)'
-    filepath: 'target/*.war'
+    filepath: 'target/*.jar'
     sandboxName: 'Test-ENG-New'
     createSandBox: true
     createProfile: true
